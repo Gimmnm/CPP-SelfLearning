@@ -1,0 +1,5 @@
+add_library(add_obj OBJECT add.cpp)
+add_library(add STATIC $<TARGET_OBJECTS:add_obj> $<TARGET_OBJECTS:common_obj>) 
+target_link_libraries(add PRIVATE common)
+target_link_libraries(add_obj PRIVATE common)
+target_include_directories(add PUBLIC ./)

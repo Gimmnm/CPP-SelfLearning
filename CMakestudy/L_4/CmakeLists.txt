@@ -1,0 +1,6 @@
+add_subdirectory(add)
+include_directories(./bin)
+
+link_directories(/Users/gzh/Documents/Learning/Zju/数据结构与算法/CPP-SelfLearning/CMakestudy/L_4/lib)
+add_executable(study4 main.cpp)
+target_link_libraries(study4 add_shared)

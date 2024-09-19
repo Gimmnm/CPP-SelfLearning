@@ -4,4 +4,4 @@ test
 .vscode
 *.rle
 .DS_Store
-cmake
+build

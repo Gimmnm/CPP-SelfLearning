@@ -1,0 +1,5 @@
+add_library(sub_obj OBJECT sub.cpp)
+add_library(sub STATIC $<TARGET_OBJECTS:sub_obj> $<TARGET_OBJECTS:common_obj>) 
+target_link_libraries(sub_obj PRIVATE common)
+target_link_libraries(sub PRIVATE common)
+target_include_directories(sub PUBLIC ./)

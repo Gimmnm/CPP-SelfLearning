@@ -1,0 +1,5 @@
+add_library(cal_obj OBJECT cal.cpp)
+add_library(cal STATIC $<TARGET_OBJECTS:cal_obj> $<TARGET_OBJECTS:add_obj> $<TARGET_OBJECTS:sub_obj> $<TARGET_OBJECTS:common_obj>) 
+target_link_libraries(cal PRIVATE add sub)
+target_link_libraries(cal_obj PRIVATE add sub)
+target_include_directories(cal PUBLIC ./)
