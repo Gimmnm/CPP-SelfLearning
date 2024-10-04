@@ -45,7 +45,7 @@ public:
         }
     }
 
-     List(List const &other) : head {std::make_shared<Node<T>>(other.head->value_)}
+    List(List const &other) : head {std::make_shared<Node<T>>(other.head->value_)}
     {
         auto cur = other.head;
         auto mcur = head;
@@ -134,7 +134,7 @@ int main() {
 
     // a.print();   // [ 1 4 10 2 8 5 7 ]
 
-    List b = a;
+    List<int> b = a;
 
     a.at(3)->erase();
 
@@ -144,11 +144,6 @@ int main() {
     b = a;
 
     std::cout << b.find(5) << std::endl; // 4
-
-    int c = 3;
-    std::unique_ptr<int> p = std::make_unique<int>(10);
-    std::unique_ptr<int> p2 = std::make_unique<int>(c);
-    std::unique_ptr<int> p3 = std::make_unique<int>(c);
 
     return 0;
 }
