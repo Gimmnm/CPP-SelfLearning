@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.30)
+set(CMAKE_CXX_STANDARD 20)
+project(m_stl LANGUAGES CXX)
+add_executable(test_array test_array.cpp)
+add_executable(test_vector test_vector.cpp)
